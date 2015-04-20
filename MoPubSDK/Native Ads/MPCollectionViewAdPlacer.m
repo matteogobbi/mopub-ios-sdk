@@ -140,6 +140,11 @@
 
 #pragma mark - <UICollectionViewDataSource>
 
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return [self.originalDataSource numberOfSectionsInCollectionView:collectionView];
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     NSUInteger numberOfItems = [self.originalDataSource collectionView:collectionView numberOfItemsInSection:section];
