@@ -149,6 +149,11 @@
 
 #pragma mark - <UITableViewDataSource>
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [self.originalDataSource numberOfSectionsInTableView:tableView];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSUInteger numberOfItems = [self.originalDataSource tableView:tableView numberOfRowsInSection:section];
