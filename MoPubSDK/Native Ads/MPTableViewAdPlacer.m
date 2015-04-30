@@ -196,8 +196,8 @@
         return [datasource tableView:tableView canEditRowAtIndexPath:origPath];
     }
 
-    // When the data source doesn't implement tableView:canEditRowAtIndexPath:, Apple assumes the cells are editable.  So we return YES.
-    return YES;
+    // When the data source doesn't implement tableView:canEditRowAtIndexPath:, Apple assumes the cells are not editable.  So we return NO.
+    return NO;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
